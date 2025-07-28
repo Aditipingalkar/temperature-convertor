@@ -1,0 +1,35 @@
+<html>  
+<head>  
+<title> temperature convertor App</title> 
+<style>  
+*{text-align:center;font-size:50px;} 
+body{background-color:azure;}
+</style>
+</head> 
+<body>  
+<h1>temperature Covertor</h1> 
+<form>     
+<label>celcius</label> 
+<input type="number" step="any" id="celcius" placeholder="Enter temperature in celcius" /> 
+</br></br> 
+<label>fahrenheit</label> 
+<input type="number" step="any" id="fahrenheit" placeholder="Enter temperature in fahrenheit" /> 
+
+</form> 
+<script>  
+let celcius=document.getElementById("celcius");
+let fahrenheit =document.getElementById("fahrenheit"); 
+celcius.addEventListener("input",function(){   
+let c=parseFloat(celcius.value); 
+let f=(c*9/5)+32;    
+fahrenheit.value=f.toFixed(2); 
+})
+fahrenheit.addEventListener("input",function(){   
+let f=parseFloat(fahrenheit.value); 
+let c=(f-32)*5/9;    
+celcius.value=c.toFixed(2); 
+})
+
+</script>
+</body>
+</html> 
